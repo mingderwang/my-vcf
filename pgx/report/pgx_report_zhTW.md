@@ -1,0 +1,41 @@
+# 藥物基因組學報告
+
+- 來源 VCF：`variants.vcf.gz`
+- 參考基因體：GRCh37/hg19
+- 產生時間：2026-08-05T06:52:54Z
+- 免責聲明：本報告僅供教育研究用途，不構成醫療建議。
+
+## 結果
+
+| 基因 | 基因型 (Diplotype) | 代謝表現型 | 相關藥物 | 臨床建議 |
+|---|---|---|---|---|
+| CYP2C19 | *1/*2 | 中間代謝者 | clopidogrel、omeprazole、citalopram | clopidogrel：標準劑量可接受；高風險 PCI 病患可考慮改用替代抗血小板藥物（CPIC）。 |
+| CYP2C9 | *1/*1 | 正常代謝者 | warfarin、phenytoin、celecoxib | 標準劑量。 |
+| VKORC1 | GA | 中間敏感性 | warfarin | 較低的起始劑量。 |
+| SLCO1B1 | *1/*1 | 正常（低 simvastatin 風險） | simvastatin | 標準劑量。 |
+| TPMT | *1/*1 | 正常硫嘌呤活性 | azathioprine、mercaptopurine、thioguanine | 標準劑量。 |
+| UGT1A1 | *1/*1 | 正常 UGT1A1 活性 | irinotecan | 標準劑量。 |
+
+## 定義性變異觀察結果（ALT 等位基因數）
+
+| 基因 | 星型 (Star) | rsID | 染色體位置 | 參考>變異 | 數量 |
+|---|---|---|---|---|---|
+| CYP2C19 | *2 | rs4244285 | chr10:96541616 | G>A | 1 |
+| CYP2C19 | *3 | rs4986893 | chr10:96540410 | G>A | 0 |
+| CYP2C19 | *17 | rs12248560 | chr10:96521657 | C>T | 0 |
+| CYP2C9 | *2 | rs1799853 | chr10:96702047 | C>T | 0 |
+| CYP2C9 | *3 | rs1057910 | chr10:96741053 | A>C | 0 |
+| VKORC1 | -1639 | rs9923231 | chr16:31107689 | C>T | 1 |
+| SLCO1B1 | *5 | rs4149056 | chr12:21331549 | T>C | 0 |
+| SLCO1B1 | *1B | rs2306283 | chr12:21329738 | A>G | 1 |
+| TPMT | *2 | rs1800462 | chr6:18143955 | C>G | 0 |
+| TPMT | *3B | rs1800460 | chr6:18139228 | C>T | 0 |
+| TPMT | *3C | rs1142345 | chr6:18130918 | T>C | 0 |
+| UGT1A1 | *6 | rs4148323 | chr2:234669144 | G>A | 0 |
+
+## 注意事項
+
+- 此 VCF 為**非相位化**（unphased）：基因型是由變異數推斷，對於以兩個標記定義的等位基因（例如 TPMT\*3A）可能有歧義。
+- **CYP2D6 與 CYP3A4/5 已排除**：mpileup 產生的 VCF 在拷貝數變異與相位化上存在盲點。
+- **UGT1A1\*28**（TA 重複序列，rs8175347）屬於 STR，短讀序/mpileup 無法可靠定基因型，**未評估**。
+- 本資料若用於 CYP2D6\* 星型判讀將不可靠。
