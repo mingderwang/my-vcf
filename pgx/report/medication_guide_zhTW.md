@@ -38,7 +38,13 @@
 
 你對 ibuprofen（布洛芬）與 diclofenac（服他靈/非炎/扶他林，Voltaren）皆有過敏反應，兩者屬不同化學類別 → 高度符合**交叉不耐受**：非免疫機制，由**抑制 COX-1** 使花生四烯酸轉入白三烯（leukotriene）路徑所致。因此對**所有非選擇性 NSAID 都會反應**。
 
-- **應終身避免**：ibuprofen、diclofenac、naproxen、ketoprofen、mefenamic acid、aspirin、indomethacin 等所有非選擇性 NSAID，**含外用製劑**（如 Voltaren Gel、Voren 凝膠）。
+- **應終身避免**：ibuprofen、diclofenac、naproxen、ketoprofen、mefenamic acid、aspirin、indomethacin 等所有非選擇性 NSAID，**含外用製劑（凝膠、藥膏、貼布、噴霧都算）**。判斷重點是看**成分**，不是品牌。台灣常見的 NSAID 外用品項（依成分）：
+  - **Diclofenac**：Voltaren Emulgel（扶他林凝膠）、Voren Gel（非炎凝膠，永信）、Clopain Gel（克痛凝膠）等
+  - **Piroxicam**：抒痛能凝膠（Softcam）、伏加斯凝膠（Focus）、痛立平乳膏（Tonex）等
+  - **Indomethacin**：INDOL 凝膠（炎得效）、三石痠痛水性藥布等
+  - **Etofenamate**：思舒酸痛凝膠（TEIRIA）等
+  - **Ketoprofen / Flurbiprofen / Ibuprofen**：各有凝膠、噴霧或貼布品項，一律避免
+  - **水楊酸類 Methyl salicylate**（如曼秀雷敦熱力鎮痛乳膏等，屬水楊酸而非 NSAID）：對 aspirin 交叉不耐受者建議同樣謹慎，塗抹前先與藥師確認
 - **通常可耐受**：選擇性 COX-2 抑制劑 **celecoxib（Celebrex，你目前正在服用）、etoricoxib**——你耐受 celecoxib 與此診斷一致。
 - **Acetaminophen（Acetal、Traceton 內含）**：低劑量（≤1000 mg/日）多數可耐受；高劑量下約 25% 的交叉不耐受者仍可能反應，注意勿超量。
 - **基因標記（僅供研究）**：VCF 中 LTC4S/PTGS1/PTGS2/ALOX5 標記多為同型合子參考型（ALOX5 rs2115819 同型合子變異型、rs12762303 異型合子）。這些為關聯研究、**不具臨床預測力**，無法解釋或排除此過敏；確診請由過敏免疫科安排口服激發試驗。
