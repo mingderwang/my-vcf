@@ -1,0 +1,20 @@
+##fileformat=VCFv4.2
+##contig=<ID=chr10,length=135534747>
+##contig=<ID=chr16,length=90354753>
+##contig=<ID=chr12,length=133851895>
+##contig=<ID=chr6,length=171115067>
+##contig=<ID=chr2,length=243199373>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1
+chr10	96540410	rs4986893	G	A	.	.	.	GT	0/0
+chr10	96541616	rs4244285	G	A	.	.	.	GT	0/1
+chr10	96521657	rs12248560	C	T	.	.	.	GT	0/0
+chr10	96702047	rs1799853	C	T	.	.	.	GT	0/0
+chr10	96741053	rs1057910	A	C	.	.	.	GT	0/0
+chr16	31107689	rs9923231	C	T	.	.	.	GT	0/1
+chr12	21331549	rs4149056	T	C	.	.	.	GT	0/0
+chr12	21329738	rs2306283	A	G	.	.	.	GT	0/0
+chr6	18143955	rs1800462	C	G	.	.	.	GT	0/0
+chr6	18139228	rs1800460	C	T	.	.	.	GT	0/0
+chr6	18130918	rs1142345	T	C	.	.	.	GT	0/0
+chr2	234669144	rs4148323	G	A	.	.	.	GT	0/0

@@ -1,0 +1,13 @@
+gene	star	rsid	chrom	pos	ref	alt	effect	category
+CYP2C19	*2	rs4244285	chr10	96541616	G	A	c.681G>A	no_function
+CYP2C19	*3	rs4986893	chr10	96540410	G	A	c.636G>A	no_function
+CYP2C19	*17	rs12248560	chr10	96521657	C	T	c.-806C>T	increase
+CYP2C9	*2	rs1799853	chr10	96702047	C	T	c.430C>T	decreased
+CYP2C9	*3	rs1057910	chr10	96741053	A	C	c.1075A>C	decreased
+VKORC1	-1639	rs9923231	chr16	31107689	C	T	c.-1639G>A	sensitive
+SLCO1B1	*5	rs4149056	chr12	21331549	T	C	c.521T>C	risk
+SLCO1B1	*1B	rs2306283	chr12	21329738	A	G	c.388A>G	neutral
+TPMT	*2	rs1800462	chr6	18143955	C	G	c.238G>C	no_function
+TPMT	*3B	rs1800460	chr6	18139228	C	T	c.460G>A	no_function
+TPMT	*3C	rs1142345	chr6	18130918	T	C	c.719A>G	no_function
+UGT1A1	*6	rs4148323	chr2	234669144	G	A	c.211G>A	decreased
