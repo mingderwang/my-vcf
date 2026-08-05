@@ -1,4 +1,5 @@
 aligned_sorted.bam
 aligned_sorted.bam.abi
 variants.vcf.gz
+variants.vcf.gz.csi
 reference/
