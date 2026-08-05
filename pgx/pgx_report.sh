@@ -143,6 +143,19 @@ resolve_ugt1a1() {
   build2 "$n6" '*6' 0 '*1'
 }
 
+resolve_cyp2d6() {
+  # Provisional SNP-only diplotype. rs16947 (*1B) is excluded: GRCh37/hg19
+  # carries the minor allele, so a hom-ref sample looks A>G (reference-genome quirk).
+  local n4 n10 n3 n6 n17 n41 n2 total
+  n4=$(get_copies CYP2D6 '*4'); n10=$(get_copies CYP2D6 '*10')
+  n3=$(get_copies CYP2D6 '*3'); n6=$(get_copies CYP2D6 '*6')
+  n17=$(get_copies CYP2D6 '*17'); n41=$(get_copies CYP2D6 '*41')
+  n2=$(get_copies CYP2D6 '*2')
+  total=$(( n4 + n10 + n3 + n6 + n17 + n41 + n2 ))
+  if [ "$total" -eq 0 ]; then echo "*1/*1"
+  else echo "unresolved"; fi
+}
+
 lookup() {
   local gene="$1" dip="$2"
   awk -F '\t' -v g="$gene" -v d="$dip" '$1==g && $2==d {print $3 "\n" $4 "\n" $5}' "$DIPLOS"
@@ -162,7 +175,7 @@ mkdir -p "$(dirname "$OUT")"
   echo
   echo "| Gene | Diplotype | Phenotype | Drugs | Action |"
   echo "|---|---|---|---|---|"
-  for gene in CYP2C19 CYP2C9 VKORC1 SLCO1B1 TPMT UGT1A1; do
+  for gene in CYP2C19 CYP2C9 VKORC1 SLCO1B1 TPMT UGT1A1 CYP2D6; do
     case "$gene" in
       CYP2C19) dip=$(resolve_cyp2c19);;
       CYP2C9)  dip=$(resolve_cyp2c9);;
@@ -170,6 +183,7 @@ mkdir -p "$(dirname "$OUT")"
       SLCO1B1) dip=$(resolve_slco1b1);;
       TPMT)    dip=$(resolve_tpmt);;
       UGT1A1)  dip=$(resolve_ugt1a1);;
+      CYP2D6)  dip=$(resolve_cyp2d6);;
     esac
     read -r pheno <<< "$(lookup "$gene" "$dip" | sed -n 1p)"
     read -r drugs <<< "$(lookup "$gene" "$dip" | sed -n 2p)"
@@ -191,9 +205,10 @@ mkdir -p "$(dirname "$OUT")"
   echo "## Caveats"
   echo
   echo "- VCF is **unphased**: diplotypes are inferred from ALT copy counts and may be ambiguous for alleles defined by two markers (e.g. TPMT\*3A)."
-  echo "- **CYP2D6 and CYP3A4/5 excluded**: copy-number and phasing blind spots in mpileup-derived VCF."
+  echo "- **CYP2D6 is provisional (SNP markers only)**: called \*1/\*1 from 7 canonical variants. Copy-number variants (\*5 deletion, gene duplications) and the \*10/\*41 phasing are NOT assessable from an mpileup VCF; the CYP2D6/CYP2D7P paralog region can also produce spurious calls. Confirm clinically with Stargazer/Aldy/PyPGx on the BAM or a CYP2D6 array."
+  echo "- **CYP2D6\*1B marker (rs16947)**: hg19 reference carries the minor allele at chr22:42523943, so a hom-ref sample appears A>G. This is a reference-genome quirk, not a \*2/\*41/\*1B call."
+  echo "- **CYP3A4/5 excluded**: copy-number and phasing blind spots in mpileup-derived VCF."
   echo "- **UGT1A1\*28** (TA-repeat, rs8175347) is an STR that short-read/mpileup calling cannot genotype reliably and is **not assessed**."
-  echo "- CYP2D6\* allele calls would be unreliable from this data."
 } > "$OUT"
 
 echo "wrote $OUT"

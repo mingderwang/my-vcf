@@ -34,3 +34,4 @@ TPMT	*3B/*3C	Poor thiopurine activity	azathioprine; mercaptopurine; thioguanine	
 UGT1A1	*1/*1	Normal UGT1A1 activity	irinotecan	standard dose.
 UGT1A1	*1/*6	Intermediate UGT1A1 activity	irinotecan	consider reduced initial dose; monitor toxicity.
 UGT1A1	*6/*6	Poor UGT1A1 activity	irinotecan	reduce initial dose; increased neutropenia risk.
+CYP2D6	*1/*1	Normal metabolizer (provisional; CNV unassessed)	SSRI/SNRI; tricyclic antidepressants; tramadol; codeine; antipsychotics	standard dose (CPIC); CYP2D6 copy-number variants not assessed.

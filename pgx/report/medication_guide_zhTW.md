@@ -12,6 +12,11 @@
 | Celebrex（希樂葆）200 mg | Celecoxib | 止痛／抗發炎（NSAID） | 200 mg |
 | 得安穩 160 mg | Valsartan | 高血壓（ARB） | 160 mg |
 | Benrone（免痛錠）100 mg | Benzbromarone | 降尿酸（促進尿酸排泄） | 100 mg |
+| Ativan（安定文）0.5 mg | Lorazepam | 抗焦慮（苯二氮平類） | 0.5 mg |
+| Tofranil（妥富腦）10 mg | Imipramine | 三環抗憂鬱劑（TCA） | 10 mg |
+| Solaxin（舒肉筋新錠）200 mg | Chlorzoxazone | 骨骼肌鬆弛劑 | 200 mg |
+| Traceton（服安痛）F.C. Tablets | Tramadol 37.5 mg + Acetaminophen 325 mg | 中度疼痛（複方止痛，第4級管制藥） | 37.5/325 mg |
+| Acetal（愛舒疼）500 mg | Acetaminophen | 止痛退燒 | 500 mg |
 
 ## 藥物 × 基因矩陣
 
@@ -21,8 +26,20 @@
 | Celecoxib | CYP2C9 | *1/*1 | 正常代謝者 | 不需調整劑量。 |
 | Valsartan | — | — | 非 CYP 依賴代謝 | 無基因限制。 |
 | Benzbromarone | — | — | 非 allopurinol | 無 HLA-B\*58:01 風險，不需先行基因檢測。 |
+| Lorazepam | —（UGT 葡萄醣醛酸化） | UGT1A1 *1/*1 正常 | 無基因限制。 |
+| Imipramine | CYP2C19（去甲基化）、CYP2D6 | CYP2C19 *1/*2；CYP2D6 *1/*1（暫定） | CPIC：CYP2C19 中間代謝者起始劑量可考慮減 25%，依療效與血中濃度調整；此處 10 mg 為極低劑量，風險低。 |
+| Chlorzoxazone | —（CYP2E1 代謝） | — | 無基因限制。 |
+| Tramadol | **CYP2D6（前驅藥活化）** | **CYP2D6 *1/*1（暫定，拷貝數未評估）** | 正常代謝者可標準用藥；因拷貝數變異未評估，仍建議低劑量起始並留意療效與副作用（CPIC）。 |
+| Acetaminophen | — | — | 無基因限制。 |
 
-**結論：四種現用藥皆不需依基因調整。**
+**結論：四種主要慢病用藥不需依基因調整；Imipramine 受 CYP2C19 \*1/\*2 影響（極低劑量下風險有限），Tramadol 依暫定 CYP2D6 \*1/\*1 為正常代謝者，但拷貝數變異未納入評估。**
+
+## 跨藥交互作用提醒
+
+- **Tramadol + Imipramine**：兩者皆具血清素作用並降低癲癇閾值，併用可能引起**血清素症候群**（躁動、體溫升高、心跳加快）或癲癇；出現上述症狀應立即回診。Imipramine 亦可能增強 tramadol 之中樞抑制。
+- **重複 Acetaminophen**：Traceton 每錠含 acetaminophen 325 mg，再加 Acetal 500 mg 易超量，**每日總量勿超過 4000 mg**，並避免與其他綜合感冒藥重複。
+- **鎮靜加成**：Lorazepam + Chlorzoxazone + Tramadol 皆抑制中樞神經，會增強嗜睡、跌倒與呼吸抑制風險；用藥期間避免開車與操作機械。
+- **Lorazepam 依賴性**：苯二氮平類長期使用有成癮與戒斷風險，短期、按醫囑使用。
 
 ## 注意事項
 

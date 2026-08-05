@@ -2,7 +2,7 @@
 
 - Source VCF: `variants.vcf.gz`
 - Reference: GRCh37/hg19
-- Called: 2026-08-05T06:52:54Z
+- Called: 2026-08-05T07:37:23Z
 - Disclaimer: educational only; not medical advice.
 
 ## Results
@@ -15,6 +15,7 @@
 | SLCO1B1 | *1/*1 | Normal (low simvastatin risk) | simvastatin | standard dose. |
 | TPMT | *1/*1 | Normal thiopurine activity | azathioprine; mercaptopurine; thioguanine | standard dose. |
 | UGT1A1 | *1/*1 | Normal UGT1A1 activity | irinotecan | standard dose. |
+| CYP2D6 | *1/*1 | Normal metabolizer (provisional; CNV unassessed) | SSRI/SNRI; tricyclic antidepressants; tramadol; codeine; antipsychotics | standard dose (CPIC); CYP2D6 copy-number variants not assessed. |
 
 ## Defining variants observed (ALT copy counts)
 
@@ -32,10 +33,19 @@
 | TPMT | *3B | rs1800460 | chr6:18139228 | C>T | 0 |
 | TPMT | *3C | rs1142345 | chr6:18130918 | T>C | 0 |
 | UGT1A1 | *6 | rs4148323 | chr2:234669144 | G>A | 0 |
+| CYP2D6 | *4 | rs3892097 | chr22:42524947 | C>A | 0 |
+| CYP2D6 | *10 | rs1065852 | chr22:42526694 | G>A | 0 |
+| CYP2D6 | *3 | rs35742686 | chr22:42524244 | T>- | 0 |
+| CYP2D6 | *6 | rs5030655 | chr22:42525086 | A>- | 0 |
+| CYP2D6 | *17 | rs28371706 | chr22:42525772 | G>A | 0 |
+| CYP2D6 | *41 | rs28371725 | chr22:42523805 | C>T | 0 |
+| CYP2D6 | *2 | rs1135840 | chr22:42522613 | G>C | 0 |
+| CYP2D6 | *1B | rs16947 | chr22:42523943 | A>G | 2 |
 
 ## Caveats
 
 - VCF is **unphased**: diplotypes are inferred from ALT copy counts and may be ambiguous for alleles defined by two markers (e.g. TPMT\*3A).
-- **CYP2D6 and CYP3A4/5 excluded**: copy-number and phasing blind spots in mpileup-derived VCF.
+- **CYP2D6 is provisional (SNP markers only)**: called \*1/\*1 from 7 canonical variants. Copy-number variants (\*5 deletion, gene duplications) and the \*10/\*41 phasing are NOT assessable from an mpileup VCF; the CYP2D6/CYP2D7P paralog region can also produce spurious calls. Confirm clinically with Stargazer/Aldy/PyPGx on the BAM or a CYP2D6 array.
+- **CYP2D6\*1B marker (rs16947)**: hg19 reference carries the minor allele at chr22:42523943, so a hom-ref sample appears A>G. This is a reference-genome quirk, not a \*2/\*41/\*1B call.
+- **CYP3A4/5 excluded**: copy-number and phasing blind spots in mpileup-derived VCF.
 - **UGT1A1\*28** (TA-repeat, rs8175347) is an STR that short-read/mpileup calling cannot genotype reliably and is **not assessed**.
-- CYP2D6\* allele calls would be unreliable from this data.
