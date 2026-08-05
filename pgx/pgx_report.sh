@@ -8,6 +8,7 @@ VCF="${1:-variants.vcf.gz}"
 OUT="${2:-pgx/report/pgx_report.md}"
 DEFS="$DIR/defs/variants.tsv"
 DIPLOS="$DIR/defs/diplotypes.tsv"
+RESDEFS="$DIR/defs/research_markers.tsv"
 
 [ -f "$VCF" ] || { echo "error: $VCF not found" >&2; exit 1; }
 command -v bcftools >/dev/null || { echo "error: bcftools required" >&2; exit 1; }
@@ -202,6 +203,23 @@ mkdir -p "$(dirname "$OUT")"
     echo "| $gene | $star | $rsid | $chrom:$pos | $ref>$alt | $copies |"
   done < "$DEFS"
   echo
+  echo "## Research markers (NSAID hypersensitivity, NON-CPIC)"
+  echo
+  echo "Association-study variants for NSAID cross-intolerance (leukotriene/COX pathways). Research-only: replication is inconsistent, they have no validated clinical predictive power, and they do NOT replace allergy work-up."
+  echo
+  echo "| Gene | Marker | rsID | chr:pos | ref>alt | Genotype |"
+  echo "|---|---|---|---|---|---|"
+  while IFS=$'\t' read -r gene marker rsid chrom pos ref alt note; do
+    [ -n "$gene" ] && [ "$gene" != "gene" ] || continue
+    c=$(copies_of "$chrom" "$pos" "$alt")
+    case "$c" in
+      0) gt="hom-ref";;
+      1) gt="het";;
+      2) gt="hom-alt";;
+    esac
+    echo "| $gene | $marker | $rsid | $chrom:$pos | $ref>$alt | $gt |"
+  done < "$RESDEFS"
+  echo
   echo "## Caveats"
   echo
   echo "- VCF is **unphased**: diplotypes are inferred from ALT copy counts and may be ambiguous for alleles defined by two markers (e.g. TPMT\*3A)."
@@ -209,6 +227,7 @@ mkdir -p "$(dirname "$OUT")"
   echo "- **CYP2D6\*1B marker (rs16947)**: hg19 reference carries the minor allele at chr22:42523943, so a hom-ref sample appears A>G. This is a reference-genome quirk, not a \*2/\*41/\*1B call."
   echo "- **CYP3A4/5 excluded**: copy-number and phasing blind spots in mpileup-derived VCF."
   echo "- **UGT1A1\*28** (TA-repeat, rs8175347) is an STR that short-read/mpileup calling cannot genotype reliably and is **not assessed**."
+  echo "- **NSAID hypersensitivity markers** are research-only associations (non-CPIC); a hom-ref call does NOT exclude cross-intolerance to ibuprofen/diclofenac/aspirin. Diagnosis is clinical (oral provocation by an allergist)."
 } > "$OUT"
 
 echo "wrote $OUT"

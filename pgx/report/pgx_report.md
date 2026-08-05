@@ -2,7 +2,7 @@
 
 - Source VCF: `variants.vcf.gz`
 - Reference: GRCh37/hg19
-- Called: 2026-08-05T07:37:23Z
+- Called: 2026-08-05T07:55:38Z
 - Disclaimer: educational only; not medical advice.
 
 ## Results
@@ -42,6 +42,21 @@
 | CYP2D6 | *2 | rs1135840 | chr22:42522613 | G>C | 0 |
 | CYP2D6 | *1B | rs16947 | chr22:42523943 | A>G | 2 |
 
+## Research markers (NSAID hypersensitivity, NON-CPIC)
+
+Association-study variants for NSAID cross-intolerance (leukotriene/COX pathways). Research-only: replication is inconsistent, they have no validated clinical predictive power, and they do NOT replace allergy work-up.
+
+| Gene | Marker | rsID | chr:pos | ref>alt | Genotype |
+|---|---|---|---|---|---|
+| LTC4S | -444A>C | rs730012 | chr5:179220638 | A>C | hom-ref |
+| PTGS1 | rs5789 | rs5789 | chr9:125143973 | C>A | hom-ref |
+| PTGS1 | rs10306135 | rs10306135 | chr9:125137695 | A>T | hom-ref |
+| PTGS2 | -765G>C | rs20417 | chr1:186650321 | C>G | hom-ref |
+| PTGS2 | -1195G>A | rs689466 | chr1:186650751 | T>A | hom-ref |
+| ALOX5 | rs2115819 | rs2115819 | chr10:45901089 | A>G | hom-alt |
+| ALOX5 | rs10900213 | rs10900213 | chr10:45904714 | G>A | hom-ref |
+| ALOX5 | rs12762303 | rs12762303 | chr10:45869171 | T>C | het |
+
 ## Caveats
 
 - VCF is **unphased**: diplotypes are inferred from ALT copy counts and may be ambiguous for alleles defined by two markers (e.g. TPMT\*3A).
@@ -49,3 +64,4 @@
 - **CYP2D6\*1B marker (rs16947)**: hg19 reference carries the minor allele at chr22:42523943, so a hom-ref sample appears A>G. This is a reference-genome quirk, not a \*2/\*41/\*1B call.
 - **CYP3A4/5 excluded**: copy-number and phasing blind spots in mpileup-derived VCF.
 - **UGT1A1\*28** (TA-repeat, rs8175347) is an STR that short-read/mpileup calling cannot genotype reliably and is **not assessed**.
+- **NSAID hypersensitivity markers** are research-only associations (non-CPIC); a hom-ref call does NOT exclude cross-intolerance to ibuprofen/diclofenac/aspirin. Diagnosis is clinical (oral provocation by an allergist).

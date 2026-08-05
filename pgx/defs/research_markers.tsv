@@ -1,0 +1,9 @@
+gene	marker	rsid	chrom	pos	ref	alt	note
+LTC4S	-444A>C	rs730012	chr5	179220638	A	C	leukotriene C4 synthase promoter; association with NSAID-exacerbated respiratory disease reported, replication inconsistent
+PTGS1	rs5789	rs5789	chr9	125143973	C	A	COX-1; A allele reported in cross-intolerant NSAID hypersensitivity
+PTGS1	rs10306135	rs10306135	chr9	125137695	A	T	COX-1; reported in cross-intolerant NSAID hypersensitivity
+PTGS2	-765G>C	rs20417	chr1	186650321	C	G	COX-2 promoter; NERD association not consistently replicated
+PTGS2	-1195G>A	rs689466	chr1	186650751	T	A	COX-2 promoter; replication inconsistent
+ALOX5	rs2115819	rs2115819	chr10	45901089	A	G	5-lipoxygenase; asthma/AERD association not consistently replicated
+ALOX5	rs10900213	rs10900213	chr10	45904714	G	A	5-lipoxygenase promoter region
+ALOX5	rs12762303	rs12762303	chr10	45869171	T	C	5-lipoxygenase; promoter Sp1-repeat VNTR itself is not typable by mpileup
