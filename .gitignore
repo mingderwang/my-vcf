@@ -3,3 +3,5 @@ aligned_sorted.bam.abi
 variants.vcf.gz
 variants.vcf.gz.csi
 reference/
+.DS_Store
+*/.DS_Store
